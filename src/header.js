@@ -1,8 +1,7 @@
 import React from 'react';
 import KGLogo from './KeyGroup Main Logo.png';
 
-const menus = ["Home","About","Contact Us","Login"];
-const mainMenu = menus.map((item) => <li>{item}</li>);
+
 
 class Header extends React.Component {
     constructor(props){
@@ -12,11 +11,13 @@ class Header extends React.Component {
 render (){
     return(
         <div className="header">
-            <div>
-                <img src={KGLogo} className='Klogo' alt='KeyGroup Logo'></img>
+            <div className='Klogo'>
+                <img src={KGLogo} className='logonaminto' alt='KeyGroup Logo'></img>
             </div>
             <div className='mainMenu'>
-                {mainMenu}
+                <button>Home</button>
+                <button>Meet The Team</button>
+                <button>Contact Us</button>
             </div>
             <div>{this.props.tXt}</div>
         </div>

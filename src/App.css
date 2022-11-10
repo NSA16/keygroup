@@ -8,8 +8,12 @@
   pointer-events: none;
 }
 
-.Klogo {
+.logonaminto {
   width: 200px !important;
+}
+
+.Klogo {
+  margin-left: 0px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -43,9 +47,18 @@
 }
 
 .header {
-  display: inline-block;
+  display: inline-flex;
 }
 
 .mainMenu {
-  display: inline !important;
+
+margin-top: 15px;
+}
+
+.mainMenu button{
+    margin: 2px; 
+}
+.mainMenu button:hover {
+  background-color: black;
+  color: white;
 }
