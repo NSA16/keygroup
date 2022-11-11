@@ -1,14 +1,24 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import KGLogo from './KeyGroup Main Logo.png';
 import Header from './header';
+import Footer from './footer';
+import Body from './body';
+import { Carousel } from 'bootstrap';
+import ContactForm from './contactform';
 
 function App() {
   return (
     <div className="App">
         <div>
           <Header/>
+        </div>
+        <div>
+            <Body/>
+        </div>
+        <ContactForm/>
+        <div>
+          <Footer/>
         </div>
     </div>
   );
