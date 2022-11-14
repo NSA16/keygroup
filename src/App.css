@@ -46,8 +46,27 @@
   }
 }
 
+.headerPosition{
+  position: fixed !important;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  background-color: white;
+  width: 100%;
+}
+
 .header {
   display: inline-flex;
+}
+
+.mainContent {
+  margin-top: 200px;
+}
+
+.homeimage {
+  background-image: url('../src/house-home-page.jpg');
+  background-size: cover;
 }
 
 .mainMenu {
@@ -64,3 +83,39 @@ margin-left: 100px;
   color: white;
 }
 
+.form-control {
+  margin-bottom: 20px;
+}
+
+.contactFormHeader {
+  padding-top: 50px;
+}
+
+.rounded.bg-black.text-white {
+  margin-bottom: 30px;
+
+}
+
+.slideslide img {
+  max-height: 500px !important;
+  max-width: auto !important;
+}
+
+.footer {
+  position: fixed !important;
+  bottom: -15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  background-color: white;
+  width: 100%;
+}
+
+.listinfo {
+  background-color: white;
+  color: black;
+}
+
+/* .slideslide {
+  
+} */
