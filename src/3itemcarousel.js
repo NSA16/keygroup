@@ -1,32 +1,62 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Carousel } from "react-bootstrap";
 
-const houselist = [
-  {
-    id: 1,
-    housemain: "http://localhost:9000/images/house1.jpg",
-    Price: "$239,000",
-    Type: "Single Family",
-    Rooms: "3 beds + 2 baths"
 
-  },
-  {
-    id: 2,
-    housemain: "http://localhost:9000/images/house2.jpg",
-    Price: "$270,000",
-    Type: "Single Family",
-    Rooms: "2 beds + 2 baths"
-  },
-  {
-    id: 3,
-    housemain: "http://localhost:9000/images/house3.jpg",
-    Price: "$225,000",
-    Type: "Single Family",
-    Rooms: "3 beds + 2 baths"
+function Entry(){
+  const [houselist, setHouseList] = useState([]);
+
+  useEffect(() =>{
+     getHouseList();
+  },[]);
+
+  const getHouseList = () => {
+      fetch("http://localhost:9000/houselist")
+      .then(response => response.json())
+      .then(data => {
+        setHouseList(data);
+      })
+      .catch((err) => {
+              console.log(err.message);
+      });
   }
-]
 
-function Entry() {
+  // const onClickView = (event, item) => {
+  //     fetch("http://localhost:9000/labor/" + item.id)
+  //         .then(response => response.json())
+  //         .then(data => {
+  //             setFormFields(data);
+  //         })
+  //         .catch((err) => {
+  //                 console.log(err.message);
+  //         });
+  // }
+
+  // const handleChange = (event) =>{
+  //     const fieldName = event.target.name;
+  //     const fieldValue = event.target.value;
+
+  //     setFormFields(values=>({...values, [fieldName]: fieldValue}));
+  // }
+
+  // const onHandleSubmit = (event) => {
+  //     event.preventDefault();
+  //     fetch("http://localhost:9000/labor/" + 0, 
+  //     {method: "POST", 
+  //     body: JSON.stringify(formFields),
+  //     headers:{'Content-type': 'application/json; charset=UTF-8',},
+  //     })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //         setFormFields(data);
+  //         getEmployeeList();
+  //     })
+  //     .catch((err) => {
+  //             console.log(err.message);
+  //     });
+  // }
+
+
+
   return (
     <div>
       <h1 className="reviews-h1">House For Sale</h1>
