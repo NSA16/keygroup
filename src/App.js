@@ -6,6 +6,7 @@ import Footer from './footer';
 import Body from './body';
 import ContactForm from './contactform';
 import Entry from './3itemcarousel';
+import Admin from './adminform';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           </div>
         </div>
         <div>
-            <Body/>
+            <Admin/>
         </div>
         <div className='homeimage w-50 mx-auto'>
         <ContactForm/>
