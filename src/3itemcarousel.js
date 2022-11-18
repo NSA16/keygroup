@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel } from "react-bootstrap";
+import Modal from './pages/Modal';
 
-
-function Entry(){
+function Slider(){
   const [houselist, setHouseList] = useState([]);
 
   useEffect(() =>{
@@ -55,10 +55,11 @@ function Entry(){
   //     });
   // }
 
+  const [isOpen, setIsOpen] = useState(false);
 
 
   return (
-    <div>
+    <div className='entryCarousel'>
       <h1 className="reviews-h1">House For Sale</h1>
       <Carousel>
         {houselist.map(houselist => (
@@ -66,9 +67,9 @@ function Entry(){
             <img
               className="houseImages d-block mx-auto"
               src={houselist.housemain}
-              alt={houselist.Rooms}
+              alt={houselist.Type}
             />
-            <Carousel.Caption className="listinfo">
+            <Carousel.Caption className="listinfo" style={{marginBottom:"-60px"}}>
               <h3>{houselist.Price}</h3>
               <p>{houselist.Type}</p>
               <p>{houselist.Rooms}</p>
@@ -76,8 +77,16 @@ function Entry(){
           </Carousel.Item>
         ))}
       </Carousel>
+      <div className='modalButton'>
+        <button onClick={() =>  setIsOpen(true)}>
+        Inquire about the property above
+        </button>
+        <Modal open={isOpen} onClose= {() => setIsOpen(false)}>
+            Fancy Modal Form
+        </Modal>
+      </div>
     </div>
   );
 }
 
-export default Entry;
+export default Slider;

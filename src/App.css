@@ -101,19 +101,32 @@ margin-left: 100px;
   max-width: auto !important;
 }
 
+.entryCarousel {
+  margin-bottom: 100px;
+}
+
 .footer {
   position: fixed !important;
-  bottom: -15px;
+  bottom: -30px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
   background-color: white;
   width: 100%;
+  margin-top: 50px;
 }
 
 .listinfo {
   background-color: white;
   color: black;
+}
+
+.contactform {
+  margin-bottom: 80px;
+}
+
+.modalButton {
+  margin-top: 30px;
 }
 
 /* .slideslide {

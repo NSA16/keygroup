@@ -7,7 +7,10 @@ function ContactForm () {
                 <h3 className="contactFormHeader">Do you have questions? Don't hesitate to contact us!</h3>
             </div>
             <div>
-                <h4>This is an h4 I have not though of.</h4>
+                <h4>330-817-0089</h4>
+            </div>
+            <div>
+                <h4>Or fill out the form below and we will be in touch in 24 hours</h4>
             </div>
             <div>
                 <input className="form-control" type="text" placeholder="Name"></input>
@@ -22,11 +25,15 @@ function ContactForm () {
                 <textarea className="form-control" placeholder="Put your questions here"></textarea>
             </div>
             <div>
-                <button className="rounded bg-black text-white">Submit</button>
+                <button className="rounded bg-black text-white" onClick={contactSubmit}>Submit</button>
             </div>
         </div>
 
     );
+}
+
+function contactSubmit ()  {
+
 }
 
 export default ContactForm;

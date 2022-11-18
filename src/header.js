@@ -9,11 +9,6 @@ function Header (){
             <div className='Klogo'>
                 <img src={KGLogo} className='logonaminto' alt='KeyGroup Logo'></img>
             </div>
-            <div className='mainMenu'>
-                <button className='rounded'>Home</button>
-                <button className='rounded'>Meet The Team</button>
-                <button className='rounded'>Contact Us</button>
-            </div>
         </div>
     );
 
